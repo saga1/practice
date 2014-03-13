@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WPATFeedReader.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeMediumLarge}" 
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded"
+    Language="ja-JP">
+
+    <phone:PhoneApplicationPage.Resources>
+        <!--④ リストボックスの1記事のデザインを設定-->
+        <DataTemplate x:Key="SyndicationItemTemplate">
+            <StackPanel Margin="10">
+                <TextBlock Text="{Binding Title.Text}" TextWrapping="Wrap" FontWeight="Bold" />
+                <TextBlock Text="{Binding Summary.Text}" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding PublishDate.DateTime}" HorizontalAlignment="Right" />
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot は、すべてのページ コンテンツが配置されるルート グリッドです-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--②背景画像の追加-->
+        
+        <Image Source="/Wallpaper.jpg" Stretch="UniformToFill" Grid.RowSpan="2" />
+        <!--TitlePanel は、アプリケーション名とページ タイトルを格納します-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,0">
+            <!--① タイトルの設定の追加-->
+            <TextBlock x:Name="ApplicationTitle" Text="WPAT Feed Reader" Style="{StaticResource PhoneTextNormalStyle}" Margin="0"/>
+            <TextBlock x:Name="PageTitle" Text="News" Margin="0"  FontFamily="Yu Gothic" Style="{StaticResource PhoneTextTitle1Style}" FontSize="56" />
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <!--③ リストボックスとプログレスバーの追加-->
+            <ProgressBar Name="progressBar1" IsIndeterminate="True" />
+            <ListBox Name="listResult" ItemTemplate="{StaticResource SyndicationItemTemplate}" DoubleTap="listResult_DoubleTap"/>
+
+            <!--⑤ ItemsTemplateで定義したデザインを適応-->
+            <!--⑥ タップしたらブラウザで開く処理を追加-->
+        </Grid>
+    </Grid>
+
+    <!--⑦ ApplicationBar の使用法を示すサンプル コード-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Mode="Minimized">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="バージョン情報" Click="abmAbout_Click" />
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

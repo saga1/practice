@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPATFlyer", "WPATFlyer\WPATFlyer\WPATFlyer.csproj", "{38821949-B5CF-4139-BC7A-6DCBA18EFB5D}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WPATFlyerContent", "WPATFlyer\WPATFlyerContent\WPATFlyerContent.contentproj", "{E81D1D06-FA61-4AA8-A460-D1A91CF872A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38821949-B5CF-4139-BC7A-6DCBA18EFB5D}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{38821949-B5CF-4139-BC7A-6DCBA18EFB5D}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{38821949-B5CF-4139-BC7A-6DCBA18EFB5D}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{38821949-B5CF-4139-BC7A-6DCBA18EFB5D}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{38821949-B5CF-4139-BC7A-6DCBA18EFB5D}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{38821949-B5CF-4139-BC7A-6DCBA18EFB5D}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{E81D1D06-FA61-4AA8-A460-D1A91CF872A3}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{E81D1D06-FA61-4AA8-A460-D1A91CF872A3}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

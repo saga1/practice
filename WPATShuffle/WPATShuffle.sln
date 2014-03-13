@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPATShuffle", "WPATShuffle\WPATShuffle\WPATShuffle.csproj", "{1BE51767-4305-4456-BA8D-76F22018FD64}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WPATShuffleContent", "WPATShuffle\WPATShuffleContent\WPATShuffleContent.contentproj", "{BC5FFB1F-8245-43A8-908F-18732303328E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BE51767-4305-4456-BA8D-76F22018FD64}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{1BE51767-4305-4456-BA8D-76F22018FD64}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{1BE51767-4305-4456-BA8D-76F22018FD64}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{1BE51767-4305-4456-BA8D-76F22018FD64}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{1BE51767-4305-4456-BA8D-76F22018FD64}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{1BE51767-4305-4456-BA8D-76F22018FD64}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{BC5FFB1F-8245-43A8-908F-18732303328E}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{BC5FFB1F-8245-43A8-908F-18732303328E}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

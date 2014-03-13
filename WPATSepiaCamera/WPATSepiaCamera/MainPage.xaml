@@ -1,0 +1,35 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WPATSepiaCamera.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="LandscapeLeft"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Wallpaper.jpg" Stretch="UniformToFill" Grid.ColumnSpan="2" />
+
+        <Canvas x:Name="viewfinderCanvas" Width="640" Height="480" Grid.Column="0">
+            <Canvas.Background>
+                <VideoBrush x:Name="viewfinderBrush">
+                    <VideoBrush.RelativeTransform>
+                        <CompositeTransform x:Name="viewfinderTransform" CenterX="0.5" CenterY="0.5"/>
+                    </VideoBrush.RelativeTransform>
+                </VideoBrush>
+            </Canvas.Background>
+            <TextBlock x:Name="txtMessage" Canvas.Left="10" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="414" Width="620" FontSize="26" Padding="20,0,0,0"/>
+        </Canvas>
+        <Button x:Name="Shot" Content="Shot" Grid.Column="1" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" Width="140" Height="140" Click="Shot_Click"/>
+    </Grid>
+</phone:PhoneApplicationPage>

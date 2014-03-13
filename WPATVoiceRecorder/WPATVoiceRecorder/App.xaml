@@ -1,0 +1,22 @@
+﻿<Application 
+    x:Class="WPATVoiceRecorder.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:local="clr-namespace:WPATVoiceRecorder">
+
+    <!--アプリケーション リソース-->
+    <Application.Resources>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!-- Required for playing music from a Silverlight app -->
+        <local:XnaFrameworkDispatcherService />
+        
+        <!--アプリケーションのライフタイム イベントを処理する必須オブジェクト-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+</Application>
